@@ -1,8 +1,11 @@
 #ifndef MARCUS_H
 #define MARCUS_H
 
+
+#ifndef ARDUINO
 #include <Arduino.h>
 #include <ArduinoJson.h>
+#endif
 
 // Maximum number of servos (adjust according to your hardware setup)
 #define MAX_SERVOS 4
