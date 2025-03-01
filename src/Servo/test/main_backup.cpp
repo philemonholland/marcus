@@ -8,6 +8,8 @@
 
 #include <Dynamixel2Arduino.h>
 
+#include <Servo.h>
+
 // Please modify it to suit your hardware.
 #if defined(ARDUINO_AVR_UNO) || defined(ARDUINO_AVR_MEGA2560) // When using DynamixelShield
   #include <SoftwareSerial.h>
