@@ -169,6 +169,6 @@ void loop() {
 
     //PC_SERIAL.println("READY");  // Signale au PC que l'Arduino est prêt
 
-    delay(500);
+    
     //delay(5);
 }
