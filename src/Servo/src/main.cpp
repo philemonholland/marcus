@@ -149,7 +149,6 @@ void loop() {
         {
         case 0: // Set position dynamixel
             Serial.println("Setting position dynamixel...");
-            dxl.setGoalPosition(receivedData.id, receivedData.value);
             dxl.setGoalPosition(receivedData.id, receivedData.value, UNIT_DEGREE);
             break;
 
