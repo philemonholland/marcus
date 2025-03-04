@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "Servo"
+		},
+		{
+			"path": "Pi"
 		}
 	],
 	"settings": {}
