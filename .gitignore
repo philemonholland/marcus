@@ -1,0 +1,9 @@
+# Ignore virtual environment
+src/Com/venv/
+src/LLM/venv/
+src/LLM/models/
+
+# Ignore other large files or models
+*.model
+*.pth
+*.ckpt
