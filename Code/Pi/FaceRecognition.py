@@ -27,6 +27,49 @@ commande = {
 }
 
 
+"""
+# Code Jérôme pour obtention du positionement en z et des angles désiré. (à tester)
+
+def compute_z(facteur_z):
+    r = 0.9786
+    z = 330  # Valeur initiale pour facteur_z = 30
+    base_facteur = 30
+    
+    if facteur_z < base_facteur:
+        return 534.85 * (r ** facteur_z) + 50.73  # Cas rare où facteur_z < 30
+
+    for _ in range(int(facteur_z - base_facteur)):
+        z *= r  # Multiplication itérative au lieu de l'exponentiation
+    
+    return z + 50.73
+
+def draw_rectangles(frame, detections, color, height=None):
+    gap_height = 10  # Hauteur des yeux par rapport à la caméra
+    gap_length = 5   # Recul des yeux par rapport à la caméra
+
+    for (x, y, w, h) in detections:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
+
+        if height is not None:
+            center_x = x + w // 2
+            center_y = y + h // 2
+            facteur_z = (w + h) / 2
+            z = compute_z(facteur_z)  # Calcul optimisé de la profondeur
+
+            # Angles corrigés avec arctan2 et conversion en degrés
+            angle_y = np.degrees(np.arctan2(z + gap_length, np.sqrt((z + gap_length) ** 2 + (h + gap_height) ** 2)))  
+            angle_x = np.degrees(np.arctan2(w, np.sqrt(w ** 2 + (z + gap_length) ** 2)))  
+
+            print(f"facteur_z: {facteur_z}, z: {z:.2f}, angle_y: {angle_y:.2f}°, angle_x: {angle_x:.2f}°")
+
+            position_text = f"X: {center_x}, Y: {height - center_y}"
+            cv2.putText(frame, position_text, (x, y + h + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+
+def draw_flipped_rectangles(frame, detections, color):
+    for (x, y, w, h) in detections:
+        x = frame.shape[1] - (x + w)
+        cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
+"""
 
 # Function to draw rectangles around detections
 def draw_rectangles(frame, detections, color, height=None):
