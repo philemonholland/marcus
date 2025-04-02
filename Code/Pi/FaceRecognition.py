@@ -12,7 +12,7 @@ from picamera2 import Picamera2
 actif = True
 
 #Connexion au broker MQTT
-broker_ip = "192.168.243.2"  # IP du broker MQTT
+broker_ip = "192.168.137.1"  # IP du broker MQTT
 topic = "commande_marcus"
 
 client = mqtt.Client()
@@ -120,6 +120,7 @@ def main():
         emotion = 'Neutral'
         
         frame = picam2.capture_array()
+        frame = cv2.flip(frame, 0)
         if height is None:
             height = frame.shape[0]
 
@@ -141,7 +142,7 @@ def main():
             
             # Mise à jour des valeurs
             commande["x"] = x + w/2
-            commande["y"] = -1*(y + h/2)
+            commande["y"] = height - y - h/2
             #commande["z"] = w*h
             commande["emotion"] = emotion
 
