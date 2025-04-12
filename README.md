@@ -31,10 +31,10 @@ Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre l
   - Envoie son statut (*ready*) au départ  
   - Contrôle effectif des mouvements de la tête
 
-- **Arduino MEGA** (contrôle boule de crystal)  
+- **Arduino MEGA** (contrôle boule de cristal)  
   - Reçoit des commandes UART (*ALLUME et ÉTEINT*)  
   - Envoie son statut (*ready*) au départ  
-  - Contrôle effectif des lumières de la boule de crystal
+  - Contrôle effectif des lumières de la boule de cristal
 
 ---
 
@@ -45,14 +45,16 @@ marcus/
 ├── docs/
 │   └── ... (Documentation, schémas, etc.)
 ├── Code/
-│   ├── Com/                      (Fonctions de communication MQTT et UART en python)
+│   ├── *Com/*                      (Fonctions de communication MQTT et UART en python)
 │   │   └── test_MQTT             (Code test MQTT entre PC et PI)
 │   │   └── test_MQTT_will.py     (Code test MQTT entre PC et PI avec départ Mosquitto auto)
 │   │   └── Test.py               (Code test pour envoie de commande manuel au OpenRB-150)
 │   │   └── dyn_test.py           (Code test pour envoie de commande manuel spécialisé pour le cou et dynamixel)
 │   │   └── Venv_setup.bat        (Executable pour installer un environnement virtuel avec les requirements automatiquement)
+│   │
 │   ├── LLM/
 │   │   └── com_llm.py            (Intégration des requêtes LLM, ex. OpenAI)
+│   │
 │   ├── Servo/
 │   │   ├── com_servos.cpp        (Implémentation MQTT côté Arduino)
 │   │   ├── servos.cpp            (Logique de contrôle des servos)
