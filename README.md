@@ -74,3 +74,9 @@ marcus/
 ├── STL                           (Dernier fichier stl des pièces imprimer)
 │
 └── README.md                     (Vous êtes ici)
+
+## License
+
+### 🗣️ Text-to-Speech (TTS)
+
+This project uses [edge-tts](https://github.com/rany2/edge-tts) to generate speech using Microsoft's Edge TTS engine.
