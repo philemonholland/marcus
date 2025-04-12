@@ -76,6 +76,7 @@ marcus/
 │   │   └── marcus_mqtt.py                        (Code principal avec integration complète)
 │   │   └── directttsb.py                         (Code modifier pour donner emotion a tts)
 │   │   └── whisper_combat.py                     (Code pour transformer les paroles en txt)
+│   │   └── Mega.cpp                              (Code pour controler les lumières de la boule de cristal)
 │   │
 │   ├── Servo/                    (Dossier platformio : Contient le code l'arduino OpenRB-150)
 │   │   ├── src/main.cpp                          (Code principal de l'arduino)
