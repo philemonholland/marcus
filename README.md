@@ -38,31 +38,39 @@ Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre l
 
 ---
 
-## Structure du Dépôt
+## Structure générale
 
 ```bash
 marcus/
 ├── docs/
 │   └── ... (Documentation, schémas, etc.)
 ├── Code/
-│   ├── *Com/*                      (Fonctions de communication MQTT et UART en python)
-│   │   └── test_MQTT             (Code test MQTT entre PC et PI)
-│   │   └── test_MQTT_will.py     (Code test MQTT entre PC et PI avec départ Mosquitto auto)
-│   │   └── Test.py               (Code test pour envoie de commande manuel au OpenRB-150)
-│   │   └── dyn_test.py           (Code test pour envoie de commande manuel spécialisé pour le cou et dynamixel)
-│   │   └── Venv_setup.bat        (Executable pour installer un environnement virtuel avec les requirements automatiquement)
+│   ├── Com/                      (Fonctions de communication MQTT et UART en python)
+│   │   └── test_MQTT                             (Code test MQTT entre PC et PI)
+│   │   └── test_MQTT_will.py                     (Code test MQTT entre PC et PI avec départ Mosquitto auto)
+│   │   └── Test.py                               (Code test pour envoie de commande manuel au OpenRB-150)
+│   │   └── dyn_test.py                           (Code test pour envoie de commande manuel spécialisé pour le cou et dynamixel)
+│   │   └── Venv_setup.bat                        (Executable pour installer un environnement virtuel avec les requirements automatiquement)
 │   │
 │   ├── LLM/
 │   │   └── com_llm.py            (Intégration des requêtes LLM, ex. OpenAI)
 │   │
-│   ├── Servo/
-│   │   ├── com_servos.cpp        (Implémentation MQTT côté Arduino)
-│   │   ├── servos.cpp            (Logique de contrôle des servos)
-│   │   └── servos.h              (Header file pour servos)
-│   ├── vision/
-│   │   ├── com_vision.py         (Communication MQTT liée à la vision)
-│   │   ├── FaceRecognition.py    (Détection visage/émotion via OpenCV)
-│   │   └── ... (Fichiers .xml pour les modèles de détection Haarcascade)
-│   └── voice/
-│       └── voice_assistant.py    (Gestion microphone + envoi audio au PC)
+│   ├── Servo/                    (Dossier platformio : Contient le code l'arduino OpenRB-150)
+│   │   ├── src/main.cpp                          (Code principal de l'arduino)
+│   │   ├── test/Demo.cpp                         (Demo de foncitonnement des moteurs dynamixel)
+│   │   └── test/Scan.cpp                         (Code de détection des ID moteurs dynamixel)
+│   │   └── test/main_backup.cpp                  (Code main fourni au départ peu modifier)
+│   │   └── README                                (Quelque explication du fonctionnement de OpenRB-150)
+│   │
+│   └── Pi/
+│       ├── FaceRecognition.py    (Détection visage, émotion et envoie info MQTT)
+│       ├── EmotionRecognitionTraining.py         (Entrainnement d'un modèle IA avec la banque de donné FER2013)
+│       ├── fer2013.zip                           (Banque de données FER2013 voir site officiel pour license)
+│       ├── haarcascade_frontalface_default.xml   (Modèle IA pour détection de visage voir site officiel pour license)
+│       ├── emotion_recognition_model.h5          (Modèle IA entrainé utiliser avec FaceRecognition)
+│       ├── 60_model.h5                           (Alternative de modèle IA)
+│       └── setup_venv.sh                         (Executable pour installer un environnement virtuel avec les requirements automatiquement)
+│
+├── STL                           (Dernier fichier stl des pièces imprimer)
+│
 └── README.md                     (Vous êtes ici)
