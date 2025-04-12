@@ -40,7 +40,7 @@ Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre l
 
 ## License
 
-## Général
+### Général
 
 Ce projet utilise la license MIT pour le code et stl que nous avons créer. Pour tout library externe veuillez vérifié la license utilisé.
 
