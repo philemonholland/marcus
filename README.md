@@ -4,6 +4,8 @@ Ce dépôt contient le code et la structure d’architecture pour un système d�
 
 ---
 
+![Marcus](docs/Marcus.jpg)
+
 ## Aperçu de l’Architecture
 
 Le diagramme ci-dessous illustre le flux de communication entre les différents composants :
