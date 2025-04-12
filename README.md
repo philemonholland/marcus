@@ -44,12 +44,16 @@ Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre l
 marcus/
 ├── docs/
 │   └── ... (Documentation, schémas, etc.)
-├── src/
-│   ├── common/
-│   │   └── communication.py       (Fonctions communes de communication MQTT/Python)
-│   ├── llm/
+├── Code/
+│   ├── Com/                      (Fonctions de communication MQTT et UART en python)
+│   │   └── test_MQTT             (Code test MQTT entre PC et PI)
+│   │   └── test_MQTT_will.py     (Code test MQTT entre PC et PI avec départ Mosquitto auto)
+│   │   └── Test.py               (Code test pour envoie de commande manuel au OpenRB-150)
+│   │   └── dyn_test.py           (Code test pour envoie de commande manuel spécialisé pour le cou et dynamixel)
+│   │   └── Venv_setup.bat        (Executable pour installer un environnement virtuel avec les requirements automatiquement)
+│   ├── LLM/
 │   │   └── com_llm.py            (Intégration des requêtes LLM, ex. OpenAI)
-│   ├── servo/
+│   ├── Servo/
 │   │   ├── com_servos.cpp        (Implémentation MQTT côté Arduino)
 │   │   ├── servos.cpp            (Logique de contrôle des servos)
 │   │   └── servos.h              (Header file pour servos)
