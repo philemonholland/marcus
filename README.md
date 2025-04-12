@@ -73,7 +73,9 @@ marcus/
 │   │   └── Venv_setup.bat                        (Executable pour installer un environnement virtuel avec les requirements automatiquement)
 │   │
 │   ├── LLM/
-│   │   └── Marcus_multithread_mqtt_servo.py      (Code principal avec integration complète)
+│   │   └── marcus_mqtt.py                        (Code principal avec integration complète)
+│   │   └── directttsb.py                         (Code modifier pour donner emotion a tts)
+│   │   └── whisper_combat.py                     (Code pour transformer les paroles en txt)
 │   │
 │   ├── Servo/                    (Dossier platformio : Contient le code l'arduino OpenRB-150)
 │   │   ├── src/main.cpp                          (Code principal de l'arduino)
