@@ -16,8 +16,8 @@ Ce dépôt contient le code et la structure d’architecture pour un système d�
 Le diagramme ci-dessous illustre le flux de communication entre les différents composants :
 
 - **Raspberry Pi**  
-  *Caméra + Reconnaissance faciale*  
-  Envoi de la position `(x,y)` et des émotions détectées via MQTT
+  *Caméra + Reconnaissance faciale + Reconnaissance d'émotion*  
+  Envoi de la position `(x,y,z)` et des émotions détectées via MQTT au PC
 
 - **Microphone**  
   *Capture audio et envoi vers le PC*
