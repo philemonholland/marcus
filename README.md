@@ -8,7 +8,7 @@ Ce dépôt contient le code et la structure d’architecture pour un système d�
 ![Marcus (Photo)](docs/Marcus.jpg)
 
 <!-- HTML image (resized) -->
-<img src="assets/marcus.png" alt="Marcus illustration" width="300"/>
+<img src="docs/Marcus.jpg" alt="Marcus illustration" width="300"/>
 
 
 ## Aperçu de l’Architecture
