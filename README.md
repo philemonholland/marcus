@@ -38,15 +38,18 @@ Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre l
 
 ---
 
-## License
+## 📄 License
 
 ### Général
 
-Ce projet utilise la license MIT pour le code et stl que nous avons créer. Pour tout library externe veuillez vérifié la license utilisé.
+Ce projet est distribué sous la licence [MIT](LICENSE.txt) pour tout le code source, les scripts, et les fichiers STL que nous avons créés.  
+Veuillez noter que certaines bibliothèques externes utilisées dans ce projet peuvent être soumises à des licences différentes. Il est de votre responsabilité de consulter et de respecter les conditions de licence de ces dépendances.
 
 ### 🗣️ Text-to-Speech (TTS)
 
-This project uses [edge-tts](https://github.com/rany2/edge-tts) to generate speech using Microsoft's Edge TTS engine.
+Ce projet utilise [edge-tts](https://github.com/rany2/edge-tts) pour générer de la parole via le moteur TTS de Microsoft Edge.  
+Consultez leur [répertoire GitHub](https://github.com/rany2/edge-tts) pour plus d’informations sur leur licence et leur politique d'utilisation.
+
 
 ## Structure générale
 
