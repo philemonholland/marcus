@@ -42,7 +42,7 @@ Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre l
 
 ### Général
 
-Ce projet est distribué sous la licence [MIT](LICENSE.txt) pour tout le code source, les scripts, et les fichiers STL que nous avons créés.  
+Ce projet est distribué sous la licence [MIT](LICENSE) pour tout le code source, les scripts, et les fichiers STL que nous avons créés.  
 Veuillez noter que certaines bibliothèques externes utilisées dans ce projet peuvent être soumises à des licences différentes. Il est de votre responsabilité de consulter et de respecter les conditions de licence de ces dépendances.
 
 ### 🗣️ Text-to-Speech (TTS)
