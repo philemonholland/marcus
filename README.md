@@ -50,11 +50,12 @@ Veuillez noter que certaines bibliothèques externes utilisées dans ce projet p
 Ce projet utilise [edge-tts](https://github.com/rany2/edge-tts) pour générer de la parole via le moteur TTS de Microsoft Edge.  
 Consultez leur [répertoire GitHub](https://github.com/rany2/edge-tts) pour plus d’informations sur leur licence et leur politique d'utilisation.
 
-## fer2013 : Base de données d'expressions faciales utilisée pour entraîner notre modèle de reconnaissance d'émotion.  
+### fer2013 : Base de données d'expressions faciales utilisée pour entraîner notre modèle de reconnaissance d'émotion.  
   Source : [Kaggle - FER-2013](https://www.kaggle.com/datasets/msambare/fer2013)  
   Utilisée uniquement à des fins de recherche et d'expérimentation.
 
-## Haar Cascade : Utilisé pour la détection de visages. Fichier `haarcascade_frontalface_default.xml` fourni par [OpenCV](https://github.com/opencv/opencv/tree/master/data/haarcascades) sous licence Apache 2.0.
+### Haar Cascade 
+  Utilisé pour la détection de visages. Fichier `haarcascade_frontalface_default.xml` fourni par [OpenCV](https://github.com/opencv/opencv/tree/master/data/haarcascades) sous licence Apache 2.0.
 
 
 ## Structure générale
