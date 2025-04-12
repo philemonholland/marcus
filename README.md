@@ -11,7 +11,7 @@ Ce dépôt contient le code et la structure d’architecture pour un système d�
 <img src="docs/Setup_Marcus.jpg" alt="Marcus illustration" width="750"/>
 
 
-## Aperçu de l’Architecture
+## Aperçu du fonctionnement
 
 Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre les différents composants :
 
