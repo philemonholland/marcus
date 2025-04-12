@@ -4,8 +4,11 @@ Ce dépôt contient le code et la structure d’architecture pour un système d�
 
 ---
 
-<!-- HTML image (resized) -->
+<!-- HTML image Marcus (resized) -->
 <img src="docs/Marcus.jpg" alt="Marcus illustration" width="300"/>
+
+<!-- HTML image Setup (resized) -->
+<img src="docs/Setup_Marcus.jpg" alt="Marcus illustration" width="300"/>
 
 
 ## Aperçu de l’Architecture
