@@ -53,7 +53,7 @@ marcus/
 │   │   └── Venv_setup.bat                        (Executable pour installer un environnement virtuel avec les requirements automatiquement)
 │   │
 │   ├── LLM/
-│   │   └── com_llm.py            (Intégration des requêtes LLM, ex. OpenAI)
+│   │   └── Marcus_multithread_mqtt_servo.py      (Code principal avec integration complète)
 │   │
 │   ├── Servo/                    (Dossier platformio : Contient le code l'arduino OpenRB-150)
 │   │   ├── src/main.cpp                          (Code principal de l'arduino)
