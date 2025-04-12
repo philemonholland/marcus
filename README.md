@@ -13,26 +13,28 @@ Ce dépôt contient le code et la structure d’architecture pour un système d�
 
 ## Aperçu de l’Architecture
 
-Le diagramme ci-dessous illustre le flux de communication entre les différents composants :
+Le diagramme ci-dessous illustre le flux de Communication/Fonctionnement entre les différents composants :
 
 - **Raspberry Pi**  
   *Caméra + Reconnaissance faciale + Reconnaissance d'émotion*  
   Envoi de la position `(x,y,z)` et des émotions détectées via MQTT au PC
 
-- **Microphone**  
-  *Capture audio et envoi vers le PC*
-
 - **PC central**  
-  - Fait office de **Broker MQTT**  
+  - Fait office de **Broker MQTT** 
   - Utilise **Whisper** (STT) pour la reconnaissance vocale  
   - Fait des requêtes au **LLM externe** (OpenAI) via une API REST (avec le contexte : texte + émotion)  
-  - Renvoie une réponse texte  
+  - Renvoie une réponse texte
   - Gère la **synthèse vocale (TTS)** pour parler via un haut-parleur
 
-- **Arduino** (contrôle des servos)  
-  - Reçoit les commandes MQTT (*PARLE, REGARDE, HOCHE_TETE, etc.*)  
-  - Envoie son statut (*busy/ready*) via MQTT  
-  - Contrôle effectif des mouvements du cou/de la tête
+- **Arduino OpenRB-150** (contrôle des servos)  
+  - Reçoit des commandes UART (*REGARDE, SURPRIS, NON IMPRESSIONER, etc.*)  
+  - Envoie son statut (*ready*) au départ  
+  - Contrôle effectif des mouvements de la tête
+
+- **Arduino MEGA** (contrôle boule de crystal)  
+  - Reçoit des commandes UART (*ALLUME et ÉTEINT*)  
+  - Envoie son statut (*ready*) au départ  
+  - Contrôle effectif des lumières de la boule de crystal
 
 ---
 
@@ -42,8 +44,6 @@ Le diagramme ci-dessous illustre le flux de communication entre les différents 
 marcus/
 ├── docs/
 │   └── ... (Documentation, schémas, etc.)
-├── lib/
-│   └── ... (Bibliothèques ou modules partagés)
 ├── src/
 │   ├── common/
 │   │   └── communication.py       (Fonctions communes de communication MQTT/Python)
