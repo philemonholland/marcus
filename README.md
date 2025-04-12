@@ -74,6 +74,7 @@ marcus/
 ├── STL                           (Dernier fichier stl des pièces imprimer)
 │
 └── README.md                     (Vous êtes ici)
+exit
 
 ## License
 
